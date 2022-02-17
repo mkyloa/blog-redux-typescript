@@ -8,7 +8,7 @@ export const LoadPostsAction = (payload: Post[]): AnyAction => ({
   payload,
 });
 
-export const LoadSelectedPostAction = (payload: SelectedPost): AnyAction => ({
+export const LoadSelectedPostAction = (payload: SelectedPost | null): AnyAction => ({
   type: SELECT_POST,
   payload,
 });

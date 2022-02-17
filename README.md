@@ -4,7 +4,7 @@
 
 A simple blog application using technologies such as:
   - React
-  - Rexux
+  - Redux
   - TypeScript
   - SCSS
   - Bulma
@@ -15,6 +15,6 @@ Features:
   - Displaying post comments
   - Adding new posts
   - Removing posts
+  - Commenting on posts
   
   The repository is self created using create-react-app.
-  

@@ -15,6 +15,7 @@ export const PostDetails: React.FC = () => {
   const onPostRemove = async () => {
     if (selectedPost?.id) {
       await removePost(selectedPost.id);
+      dispatch(LoadSelectedPostAction(null));
     }
   };
 
