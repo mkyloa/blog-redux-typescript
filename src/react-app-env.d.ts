@@ -18,7 +18,7 @@ type Post = {
 };
 
 interface SelectedPost extends Post {
-  comments: PostComment[] | [],
+  comments: PostComment[],
 }
 
 type PostComment = {
