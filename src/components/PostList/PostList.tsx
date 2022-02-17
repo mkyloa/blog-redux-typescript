@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getPosts, getPostWithComments } from '../../api/posts';
 import { LoadPostsAction, LoadSelectedPostAction } from '../../store/actions';
 import { getPostsSelector } from '../../store/selectors';
+import './PostList.scss';
 
 export const PostList = () => {
   const [selectedPostId, setSelectedPostId] = useState(0);
@@ -30,12 +31,12 @@ export const PostList = () => {
 
   return (
     <div className="content list">
-      <ul>
+      <ul className="PostList">
         {posts.map(post => (
-          <div key={post.id} className="list-item">
+          <div key={post.id} className="list-item PostList__item">
             <li>
               <h1>{post.title}</h1>
-              {post.body}
+              <p>{post.body}</p>
               <button
                 className="button"
                 onClick={() => loadSelectedPost(post.id)}

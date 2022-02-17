@@ -1,5 +1,6 @@
 import React from 'react';
 import { removePost } from '../../api/posts';
+import './PostDetails.scss';
 
 type Props = {
   selectedPost: SelectedPost | null,
@@ -14,23 +15,29 @@ export const PostDetails: React.FC<Props> = ({ selectedPost }) => {
   };
   if (!selectedPost) {
     return (
-      <div>No post</div>
+      <div 
+        className="content has-text-centered"
+      >
+        <h3>No post selected</h3>
+      </div>
     );
   }
 
   return (
-    <div className="content card">
+    <div className="content card PostDetails">
       <h1>Title: {selectedPost.title}</h1>
       <p>Body: {selectedPost.body}</p>
       <ul>
-        <p>Comments: {selectedPost.comments.map((comment: PostComment) => (
+        <p>
+          Comments ({selectedPost.comments.length})
+        </p>
+        {selectedPost.comments.map((comment: PostComment) => (
           <li key={comment.body}>{comment.body}</li>
         ))}
-        </p>
       </ul>
       <button
         type="button"
-        className="button is-danger is-centered"
+        className="button is-danger PostDetails__button"
         onClick={() => onPostRemove()}
       >
         Delete this post
