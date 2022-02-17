@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/blog-redux-typescript/static/css/main.50eaa847.css",
+    "main.js": "/blog-redux-typescript/static/js/main.6cced8f9.js",
+    "index.html": "/blog-redux-typescript/index.html",
+    "main.6cced8f9.js.map": "/blog-redux-typescript/static/js/main.6cced8f9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.50eaa847.css",
+    "static/js/main.6cced8f9.js"
+  ]
+}
