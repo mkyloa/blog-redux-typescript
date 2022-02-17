@@ -1,0 +1,18 @@
+.PostForm {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+
+  &__input {
+    margin: 0 0 10px;
+  }
+
+  &__textarea {
+    margin: 0 0 10px;
+  }
+
+  &__button {
+    width: 200px;
+    align-self: center;
+  }
+}
